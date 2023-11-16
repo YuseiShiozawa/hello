@@ -1,6 +1,14 @@
+#[derive(Debug)]
+enum NumOrStr {
+    Num(i32),
+    Str(String),
+    Hoge,
+}
+
 fn main() {
-    let mut v = vec![1, 2, 3];
-    v.insert(0, 10000);
-    v.pop();
-    println!("{:?}", &v);
+    let x = NumOrStr::Num(10);
+    let y = NumOrStr::Str("waowao".to_string());
+    let z = NumOrStr::Hoge;
+
+    println!("x: {:?}, y: {:?}, z: {:?}", x, y, z);
 }
