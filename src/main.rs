@@ -1,5 +1,9 @@
+fn chan(s: String) -> String {
+   s + "-chan"
+}
+
 fn main() {
-    let mut x = 1;
-    x = 2;
-    println!("{}", x);
+    let x = "neko".to_string();
+    let y = chan(x);
+    println!("{}", y);
 }
