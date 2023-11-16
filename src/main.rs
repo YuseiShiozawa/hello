@@ -6,9 +6,19 @@ enum NumOrStr {
 }
 
 fn main() {
-    let x = NumOrStr::Num(10);
-    let y = NumOrStr::Str("waowao".to_string());
-    let z = NumOrStr::Hoge;
+    let mut v = vec![NumOrStr::Num(10)];
+    v.push( NumOrStr::Str("waowao".to_string()) );
+    v.push( NumOrStr::Hoge );
 
-    println!("x: {:?}, y: {:?}, z: {:?}", x, y, z);
+    println!("{:?}", &v);
+
+    for e in v {
+        match e {
+            NumOrStr::Num(n) => println!("数字だよ {}", n),
+            NumOrStr::Str(s) => println!("文字列だよ {}", s),
+            NumOrStr::Hoge   => println!("HOGE!!!!!!!!!!!!!!!"),
+
+        }
+    }
+
 }
