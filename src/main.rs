@@ -1,9 +1,6 @@
-fn chan(s: &mut String) {
-   s.push_str("-chan");
-}
-
 fn main() {
-    let mut x = "neko".to_string();
-    chan(&mut x);
-    println!("{}", x);
+    let mut v = vec![1, 2, 3];
+    v.insert(0, 10000);
+    v.pop();
+    println!("{:?}", &v);
 }
